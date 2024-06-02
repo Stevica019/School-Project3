@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2024 at 05:38 PM
+-- Generation Time: Jun 02, 2024 at 10:01 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -39,8 +39,18 @@ CREATE TABLE `korisnici` (
 --
 
 INSERT INTO `korisnici` (`id`, `user`, `password`, `reg_date`) VALUES
-(2, 'Milojko', '$2y$10$MmVLdjV6Qdt5GP5nHE0aqeXztGyy45VScp6LdvCxMAwNffFxTxQZK', '2024-05-29 13:45:31'),
-(5, 'Boban1', '$2y$10$pHkTS2vm4ycDOSfPBT.G/.eIamvTr60zr8WD7ccXAodeDRQn7BLq2', '2024-05-29 16:56:41');
+(6, 'Pepsi123', '$2y$10$TrvylQo7ajiilmH3lgR6yeLi6Q4sKKftTx3z1yac53LfV6pRmPGnG', '2024-06-02 00:01:31');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `stud_test`
+--
+
+CREATE TABLE `stud_test` (
+  `id` int(11) NOT NULL,
+  `answer` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
@@ -54,6 +64,13 @@ ALTER TABLE `korisnici`
   ADD UNIQUE KEY `user` (`user`);
 
 --
+-- Indexes for table `stud_test`
+--
+ALTER TABLE `stud_test`
+  ADD UNIQUE KEY `answer` (`answer`),
+  ADD KEY `id` (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -61,7 +78,13 @@ ALTER TABLE `korisnici`
 -- AUTO_INCREMENT for table `korisnici`
 --
 ALTER TABLE `korisnici`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `stud_test`
+--
+ALTER TABLE `stud_test`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
